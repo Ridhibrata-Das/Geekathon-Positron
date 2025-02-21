@@ -1,0 +1,124 @@
+/* Body styling */
+body {
+    background: linear-gradient(45deg, #1b5e20, #4caf50, #81c784, #a5d6a7);
+    background-size: 400% 400%;
+    animation: gradientBG 8s infinite alternate;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ @keyframes gradientBG {
+    0% {
+       background-position: 0% 50%;
+    }
+    100% {
+       background-position: 100% 50%;
+    }
+ }
+ 
+ /* Back Button */
+ .back-button {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+ }
+ 
+ .back-button:hover {
+    color: #ffeb3b;
+ }
+ 
+ /* Graph container styling */
+ .graph-container {
+    display: flex;
+    flex-direction: column;  /* Stack graphs in a column */
+    gap: 20px;  /* Add space between graphs */
+    padding: 20px;
+    width: 100%;
+ }
+ 
+ /* Graph styling */
+ .graph {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+ }
+ 
+ .graph:hover {
+    transform: translateY(-5px);
+ }
+ 
+ /* Graph titles styling */
+ .graph h6 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffeb3b;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+ }
+ 
+ /* Sizes for graphs inside div */
+ #weather-chart, #humidity-chart, #showers-chart, canvas {
+    width: 100%;  /* Ensure charts take full width */
+    height: 300px;  /* Set uniform height for each graph */
+ }
+ 
+ /* Responsive Design */
+ @media screen and (max-width: 768px) {
+    .graph-container {
+       padding: 10px;
+    }
+ 
+    .graph {
+       padding: 15px;
+    }
+ 
+    .back-button {
+       font-size: 20px;
+    }
+ }
+ 
+ /* Axis Labels Styling */
+ .axis text {
+    font-size: 14px;
+    fill: #ffffff;  /* Axis text color */
+ }
+ 
+ /* Move axis labels away from graph lines */
+ .axis .tick text {
+    text-anchor: middle;
+ }
+ 
+ .axis .x-axis text {
+    transform: translateY(15px);  /* Increase space between X-axis labels and graph */
+ }
+ 
+ .axis .y-axis text {
+    transform: translateX(-30px);  /* Increase space between Y-axis labels and graph */
+ }
+ 
+ /* Tooltip Styling */
+ .tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+ }
+ 

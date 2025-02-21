@@ -1,0 +1,137 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #1b5e20, #4caf50, #81c784, #a5d6a7);
+    background-size: 400% 400%;
+    animation: gradientBG 8s infinite alternate;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar a {
+    color: #ffffff;
+    padding: 1rem 0;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar a:hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 2rem;
+    width: 100%;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+button {
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(45deg, #ffeb3b, #ff9800);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #fbc02d, #ff5722);
+    transform: scale(1.1);
+}
+
+/* Animated Background for Cards */
+.chart {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.chart:hover {
+    transform: scale(1.05);
+}
+
+/* Search Bar */
+.searchtoolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+/* Menu Icon */
+.menu-icon {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    color: #ffffff;
+}
+
+.menu-icon:hover {
+    color: #ffeb3b;
+}
